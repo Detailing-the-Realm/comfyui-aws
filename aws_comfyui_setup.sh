@@ -1,13 +1,15 @@
 git clone https://github.com/comfyanonymous/ComfyUI.git
 sudo sed -i "/#\$nrconf{restart} = 'i';/s/.*/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
 sudo apt-get update
-sudo apt install wget git python3 python3-venv build-essential net-tools curl -y
+sudo apt install wget git python3 python3-venv build-essential net-tools curl ffmpeg -y
+
 # install CUDA (from https://developer.nvidia.com/cuda-downloads)
 wget https://developer.download.nvidia.com/compute/cuda/12.2.1/local_installers/cuda_12.2.1_535.86.10_linux.run
 sudo sh cuda_12.2.1_535.86.10_linux.run --silent
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 sudo -u ubuntu git lfs install --skip-smudge
+
 #  Setup ComfyUI
 cd ComfyUI
 # Setup virtual environment for Python
@@ -37,7 +39,9 @@ cd ../loras
 wget https://civitai.com/api/download/models/152042
 
 # Add custom nodes for ultimate workflow https://civitai.com/models/119528/sdxl-comfyui-ultimate-workflow
-cd ../custom_nodes
+python -m pip install GitPython gfpgan addict simpleeval --no-warn-script-location
+
+cd ../../custom_nodes
 # Install Comfyroll Custom Nodes
 git clone https://github.com/RockOfFire/ComfyUI_Comfyroll_CustomNodes.git
 # Install ComfyUI Impact Pack
@@ -45,8 +49,7 @@ git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
 cd ComfyUI-Impact-Pack
 # Install Impact Pack submodules ahead of initial launch
 git submodule update --init --recursive
-# Install GitPython dependency (needed for next line)
-python -m pip install GitPython --no-warn-script-location
+
 # Install Impact Pack dependencies
 python install.py
 # Go back to custom nodes
@@ -79,14 +82,8 @@ cd comfyui_controlnet_aux
 # Install Python dependencies
 python -s -m pip install -r requirements.txt --no-warn-script-location
 
-# Install Addict module as it's not being installed normally
-python -m pip install addict --no-warn-script-location
-
 # Change directory back to custom_nodes
 cd ..
-
-# Get simpleeval package as it has trouble loading first time
-python -m pip install simpleeval --no-warn-script-location
 
 # Download Failfast Extensions
 git clone https://github.com/failfa-st/failfast-comfyui-extensions.git
@@ -104,10 +101,7 @@ cd comfy_mtb
 python -m pip install requirements-parser --no-warn-script-location
 
 # Installing MTB requirement dependencies
-python -m pip install -r reqs_windows.txt --no-warn-script-location
-
-# Installing gfpgan dependency
-python -m pip install gfpgan --no-warn-script-location
+python -m pip install -r requirements.txt --no-warn-script-location
 
 # Change directory back to custom_nodes
 cd ..
