@@ -1,12 +1,12 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: A CloudFormation template to deploy the Stable Diffusion Web UI by Automatic1111
+Description: A CloudFormation template to deploy the ComfyUI for Stable Diffusion XL
 
 Resources:
   SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupName: sd-webui-sg
-      GroupDescription: Security group for SD WebUI EC2 instance
+      GroupDescription: Security group for ComfyUI EC2 instance
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
@@ -26,7 +26,7 @@ Resources:
           Ebs:
             VolumeSize: 100
             VolumeType: gp2
-      "Tags": [{ "Key": "Name", "Value": "sd-web-ui-cf" }]
+      "Tags": [{ "Key": "Name", "Value": "comfyui-web-ui-cf" }]
       SecurityGroups:
         - Ref: SecurityGroup
       UserData:
@@ -39,11 +39,11 @@ Resources:
           cd /home/ubuntu
           cp  comfyui-aws/webui.sh ComfyUI/
 
-          # change ownership of the web UI so that a regular user can start the server
+          # change ownership of the ComfyUI so that a regular user can start the server
           sudo chown -R ubuntu:ubuntu ComfyUI/
 
           # start the server as user 'ubuntu'
-          sudo -u ubuntu nohup bash ComfyUI/webui.sh --listen > log.txt
+          sudo -u ubuntu nohup bash ComfyUI/webui.sh > log.txt
   MyEIP:
     Type: AWS::EC2::EIP
   MyEIPAssociation:

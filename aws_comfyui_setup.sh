@@ -10,6 +10,7 @@ sudo apt-get install git-lfs
 sudo -u ubuntu git lfs install --skip-smudge
 #  Setup ComfyUI
 cd ComfyUI
+# Setup virtual environment for Python
 python -m venv venv
 source venv/bin/activate
 python -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121  --no-warn-script-location
@@ -163,10 +164,3 @@ cd insightface
 curl -L https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_mobilenet0.25_Final.pth --output detection_mobilenet0.25_Final.pth
 curl -L https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth --output detection_Resnet50_Final.pth
 curl -L https://huggingface.co/deepinsight/inswapper/resolve/main/inswapper_128.onnx --output inswapper_128.onnx
-
-# change ownership of the web UI so that a regular user can start the server
-cd cd /home/ubuntu
-sudo chown -R ubuntu:ubuntu ComfyUI/
-
-# start the server as user 'ubuntu'
-sudo -u ubuntu nohup bash ComfyUI/webui.sh --listen > log.txt
