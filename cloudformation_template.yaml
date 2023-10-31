@@ -41,6 +41,7 @@ Resources:
 
           # change ownership of the ComfyUI so that a regular user can start the server
           sudo chown -R ubuntu:ubuntu ComfyUI/
+          sudo chmod 755 ComfyUI/webui.sh
 
           # start the server as user 'ubuntu'
           sudo -u ubuntu nohup bash ComfyUI/webui.sh > log.txt

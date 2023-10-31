@@ -13,33 +13,33 @@ sudo -u ubuntu git lfs install --skip-smudge
 #  Setup ComfyUI
 cd ComfyUI
 # Setup virtual environment for Python
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
-python -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121  --no-warn-script-location
+python3 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121  --no-warn-script-location
 
 # Install Comfyui requirements
-python -m pip -r requirements.txt  --no-warn-script-location
+python3 -m pip install -r requirements.txt  --no-warn-script-location
 
 # Download the SD model v2.1 and move it to the SD model directory
 cd models/checkpoints
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 # Dynavision XL https://civitai.com/models/122606/dynavision-xl-all-in-one-stylized-3d-sfw-and-nsfw-output-no-refiner-needed?modelVersionId=198962
-wget https://civitai.com/api/download/models/198962
+curl -L https://civitai.com/api/download/models/198962 --output DynaVisionXL_Allinone.safetensor
 # DreamShaper XL https://civitai.com/models/112902/dreamshaper-xl10?modelVersionId=126688
-wget https://civitai.com/api/download/models/126688
+curl -L https://civitai.com/api/download/models/126688 --output dreamshaper_xl10.safetensor
 # Juggernaut XL https://civitai.com/models/133005/juggernaut-xl?modelVersionId=198530
-wget https://civitai.com/api/download/models/198530
+curl -L https://civitai.com/api/download/models/198530 --output juggernault_xl.safetensor
 # Crystal Clear XL https://civitai.com/models/122822/crystal-clear-xl
-wget https://civitai.com/api/download/models/133832
+curl -L https://civitai.com/api/download/models/133832 --output crystal_clear_xl.safetensor
 
 # Add Loras
 cd ../loras
 # DnD Lora https://civitai.com/models/134343/dungeons-and-dragons-style-fantasy-lora-xl?modelVersionId=152042
-wget https://civitai.com/api/download/models/152042
+curl -L https://civitai.com/api/download/models/152042 --output dungeons_and_dragons.safetensor
 
 # Add custom nodes for ultimate workflow https://civitai.com/models/119528/sdxl-comfyui-ultimate-workflow
-python -m pip install GitPython gfpgan addict simpleeval --no-warn-script-location
+python3 -m pip install GitPython gfpgan addict simpleeval --no-warn-script-location
 
 cd ../../custom_nodes
 # Install Comfyroll Custom Nodes
@@ -51,7 +51,7 @@ cd ComfyUI-Impact-Pack
 git submodule update --init --recursive
 
 # Install Impact Pack dependencies
-python install.py
+python3 install.py
 # Go back to custom nodes
 cd ..
 # Install WAS Node Suite
@@ -59,7 +59,7 @@ git clone https://github.com/WASasquatch/was-node-suite-comfyui.git
 cd was-node-suite-comfyui
 
 # Install WAS Node Suite dependencies
-python -s -m pip install -r requirements.txt --no-warn-script-location
+python3 -s -m pip install -r requirements.txt --no-warn-script-location
 
 # Change directory to custom_nodes
 cd ..
@@ -80,7 +80,7 @@ git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git
 cd comfyui_controlnet_aux
 
 # Install Python dependencies
-python -s -m pip install -r requirements.txt --no-warn-script-location
+python3 -s -m pip install -r requirements.txt --no-warn-script-location
 
 # Change directory back to custom_nodes
 cd ..
@@ -98,10 +98,10 @@ git clone https://github.com/melMass/comfy_mtb.git
 cd comfy_mtb
 
 # Installing MTB depdenencies
-python -m pip install requirements-parser --no-warn-script-location
+python3 -m pip install requirements-parser --no-warn-script-location
 
 # Installing MTB requirement dependencies
-python -m pip install -r requirements.txt --no-warn-script-location
+python3 -m pip install -r requirements.txt --no-warn-script-location
 
 # Change directory back to custom_nodes
 cd ..
