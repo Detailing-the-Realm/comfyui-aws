@@ -44,7 +44,7 @@ Resources:
           sudo chmod 755 ComfyUI/webui.sh
 
           # start the server as user 'ubuntu'
-          sudo -u ubuntu nohup bash ComfyUI/webui.sh > log.txt
+          sudo -u ubuntu nohup bash /home/ubuntu/ComfyUI/webui.sh > log.txt
   MyEIP:
     Type: AWS::EC2::EIP
   MyEIPAssociation:

@@ -1,0 +1,9 @@
+[Unit]
+Description=ComfyUI Server.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/ubuntu/ComfyUI/webui.sh
+
+[Install]
+WantedBy=multi-user.target

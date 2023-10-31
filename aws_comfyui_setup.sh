@@ -38,6 +38,12 @@ cd ../loras
 # DnD Lora https://civitai.com/models/134343/dungeons-and-dragons-style-fantasy-lora-xl?modelVersionId=152042
 curl -L https://civitai.com/api/download/models/152042 --output dungeons_and_dragons.safetensor
 
+# Add Upscale model
+cd ../upscale_models
+curl -L https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Superscale-SP_178000_G.pth --output 4x_NMKD-Superscale-SP_178000_G.pth
+
+cd ../vae
+curl -L https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt --output vae-ft-mse-840000-ema-pruned.ckpt
 # Add custom nodes for ultimate workflow https://civitai.com/models/119528/sdxl-comfyui-ultimate-workflow
 python3 -m pip install GitPython gfpgan addict simpleeval --no-warn-script-location
 
