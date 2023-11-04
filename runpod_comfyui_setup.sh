@@ -17,10 +17,10 @@ cd /workspace/ComfyUI/loras
 curl -L https://civitai.com/api/download/models/152042 --output dungeons_and_dragons.safetensor
 
 # Add Upscale model
-cd /workspace/ComfyUI/upscale_models
+cd /workspace/ComfyUI/models/upscale_models
 curl -L https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Superscale-SP_178000_G.pth --output 4x_NMKD-Superscale-SP_178000_G.pth
 
-cd /workspace/ComfyUI/vae
+cd /workspace/ComfyUI/models/vae
 curl -L https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt --output vae-ft-mse-840000-ema-pruned.ckpt
 # Add custom nodes for ultimate workflow https://civitai.com/models/119528/sdxl-comfyui-ultimate-workflow
 python3 -m pip install GitPython gfpgan addict simpleeval --no-warn-script-location
