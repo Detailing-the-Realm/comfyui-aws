@@ -25,18 +25,18 @@ cd models/checkpoints
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 # Dynavision XL https://civitai.com/models/122606/dynavision-xl-all-in-one-stylized-3d-sfw-and-nsfw-output-no-refiner-needed?modelVersionId=198962
-curl -L https://civitai.com/api/download/models/198962 --output DynaVisionXL_Allinone.safetensor
+curl -L https://civitai.com/api/download/models/198962 --output DynaVisionXL_Allinone.safetensors
 # DreamShaper XL https://civitai.com/models/112902/dreamshaper-xl10?modelVersionId=126688
-curl -L https://civitai.com/api/download/models/126688 --output dreamshaper_xl10.safetensor
+curl -L https://civitai.com/api/download/models/126688 --output dreamshaper_xl10.safetensors
 # Juggernaut XL https://civitai.com/models/133005/juggernaut-xl?modelVersionId=198530
-curl -L https://civitai.com/api/download/models/198530 --output juggernault_xl.safetensor
+curl -L https://civitai.com/api/download/models/198530 --output juggernault_xl.safetensors
 # Crystal Clear XL https://civitai.com/models/122822/crystal-clear-xl
-curl -L https://civitai.com/api/download/models/133832 --output crystal_clear_xl.safetensor
+curl -L https://civitai.com/api/download/models/133832 --output crystal_clear_xl.safetensors
 
 # Add Loras
 cd ../loras
 # DnD Lora https://civitai.com/models/134343/dungeons-and-dragons-style-fantasy-lora-xl?modelVersionId=152042
-curl -L https://civitai.com/api/download/models/152042 --output dungeons_and_dragons.safetensor
+curl -L https://civitai.com/api/download/models/152042 --output dungeons_and_dragons.safetensors
 
 # Add Upscale model
 cd ../upscale_models
