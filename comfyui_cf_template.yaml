@@ -34,17 +34,17 @@ Resources:
           #!/bin/bash
           cd /home/ubuntu
           git clone https://github.com/Detailing-the-Realm/comfyui-aws.git
-          mv comfyui-aws/aws_comfyui_setup.sh ./
-          bash aws_comfyui_setup.sh -y
+
+          bash comfyui-aws/aws_comfyui_setup.sh -y
           cd /home/ubuntu
-          cp  comfyui-aws/webui.sh ComfyUI/
+          cp  comfyui-aws/aws_webui.sh ComfyUI/
 
           # change ownership of the ComfyUI so that a regular user can start the server
           sudo chown -R ubuntu:ubuntu ComfyUI/
-          sudo chmod 755 ComfyUI/webui.sh
+          sudo chmod 755 ComfyUI/aws_webui.sh
 
           # start the server as user 'ubuntu'
-          sudo -u ubuntu nohup bash /home/ubuntu/ComfyUI/webui.sh > log.txt
+          sudo -u ubuntu nohup bash /home/ubuntu/ComfyUI/aws_webui.sh > log.txt
   MyEIP:
     Type: AWS::EC2::EIP
   MyEIPAssociation:
