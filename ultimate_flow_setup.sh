@@ -1,3 +1,4 @@
+source "{$comfyui_dir}/venv/bin/activate"
 # Add custom nodes for ultimate workflow https://civitai.com/models/119528/sdxl-comfyui-ultimate-workflow
 python3 -m pip install GitPython gfpgan addict simpleeval --no-warn-script-location
 
