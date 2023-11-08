@@ -1,3 +1,4 @@
+cd $main_dir
 git clone https://github.com/comfyanonymous/ComfyUI.git
 sudo apt install wget git python3 python3-venv build-essential net-tools curl ffmpeg -y
 
