@@ -1,7 +1,9 @@
 comfyui_dir="/workspace/ComfyUI"
+main_dir="/workspace"
 export comfyui_dir
+export main_dir
 
-sudo apt-get update
+apt-get update
 
 bash comfyui_setup.sh
 bash loras_setup.sh
