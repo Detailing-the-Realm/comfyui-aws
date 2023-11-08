@@ -7,6 +7,7 @@ cd $comfyui_dir
 # Setup virtual environment for Python
 python3 -m venv venv
 source "{$comfyui_dir}/venv/bin/activate"
+python3 -m pip install --upgrade pip
 python3 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121  --no-warn-script-location
 
 # Install Comfyui requirements
