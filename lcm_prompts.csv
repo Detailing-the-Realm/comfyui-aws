@@ -1,0 +1,5 @@
+positive,negative,positive_ascore,negative_ascore,art_style,steps,cfg,checkpoint,lora,height,width,noise_seed
+portrait of a female with leather armor holding a sword,"male, metal",6,2,artstyle-fantasy ,25,8,,dungeons_and_dragons ,1024,1024,5
+portrait of a female with leather armor holding a sword,"male, metal",8,1,artstyle-fantasy ,50,11,,dungeons_and_dragons ,1024,1024,5
+portrait of a male with leather armor holding a sword,"female, metal",6,2,artstyle-fantasy ,25,8,,dungeons_and_dragons ,1024,1024,5
+portrait of a male with leather armor holding a sword,"female, metal",8,1,artstyle-fantasy ,50,11,,dungeons_and_dragons ,1024,1024,5

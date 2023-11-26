@@ -20,6 +20,15 @@ CHECKPOINTS = [
     "unstable_vae",
 ]
 
+LORAS = [
+    "1950_pinup",
+    "character",
+    "fantasy_art",
+    "forgotten_pages",
+    "princeps_omnia_lora",
+    "dungeons_and_dragons",
+]
+
 
 def fix_negative(positive_prompt, negative_prompt):
     """."""

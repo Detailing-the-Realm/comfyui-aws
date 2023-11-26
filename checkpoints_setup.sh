@@ -1,5 +1,8 @@
 # Download the SD model v2.1 and move it to the SD model directory
 cd "${comfyui_dir}/models/checkpoints"
+
+curl -L https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0_0.9vae.safetensors?download=true --output sd_xl_refiner_1.0_0.9vae.safetensors &
+curl -L https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors?download=true --output sd_xl_base_1.0_0.9vae.safetensors &
 # Collosus XL https://civitai.com/models/147720?modelVersionId=208476
 curl -L https://civitai.com/api/download/models/208476 --output colosus_xl_vae.safetensors &
 

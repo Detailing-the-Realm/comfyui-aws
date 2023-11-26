@@ -21,8 +21,10 @@ CHECKPOINTS = [
 ]
 
 LORAS = [
-    "1950_pinup_xl",
-    "fantasy",
+    "1950_pinup",
+    "character",
+    "fantasy_art",
+    "forgotten_pages",
     "princeps_omnia_lora",
     "dungeons_and_dragons",
 ]
@@ -56,6 +58,18 @@ def set_row_data(input_data, data_to_update):
         data_to_update["84"]["inputs"]["vae_name"] = "Baked VAE"
     else:
         data_to_update["84"]["inputs"]["vae_name"] = "sdxl_vae.safetensors"
+
+    if "refiner" in input_data["checkpoint"]:
+        data_to_update["84"]["inputs"][
+            "refiner_ckpt_name"
+        ] = "sd_xl_refiner_1.0_0.9vae.safetensors"
+        data_to_update["161"]["inputs"]["refiner_step"] = int(
+            round(input_data["steps"] * 0.8)
+        )
+    else:
+        data_to_update["84"]["inputs"]["refiner_ckpt_name"] = "None"
+        data_to_update["161"]["inputs"]["refiner_step"] = int(input_data["steps"])
+
     data_to_update["85"]["inputs"]["lora_name_1"] = (
         input_data["lora"].strip() + ".safetensors"
     )
@@ -73,9 +87,6 @@ def set_row_data(input_data, data_to_update):
 
     # step configuration
     data_to_update["161"]["inputs"]["steps_total"] = int(input_data["steps"])
-    data_to_update["161"]["inputs"]["refiner_step"] = int(
-        round(input_data["steps"] * 1)
-    )
     data_to_update["161"]["inputs"]["cfg"] = float(input_data["cfg"])
     # data_to_update["161"]["inputs"]["sampler_name"] = input_data["sampler_name"]
     # data_to_update["161"]["inputs"]["scheduler"] = input_data["scheduler"]
