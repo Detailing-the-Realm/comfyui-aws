@@ -48,13 +48,13 @@
   },
   "84": {
     "inputs": {
-      "base_ckpt_name": "crystal_clear_xl.safetensors",
-      "base_clip_skip": -3,
+      "base_ckpt_name": "dynavision_vae.safetensors",
+      "base_clip_skip": -2,
       "refiner_ckpt_name": "None",
       "refiner_clip_skip": -3,
       "positive_ascore": 6,
       "negative_ascore": 2,
-      "vae_name": "sdxlL-vae_0.9.safetensors",
+      "vae_name": "Baked VAE",
       "positive": [
         "279",
         0
@@ -76,10 +76,6 @@
       "batch_size": [
         "205",
         3
-      ],
-      "lora_stack": [
-        "85",
-        0
       ]
     },
     "class_type": "Eff. Loader SDXL",
@@ -87,215 +83,9 @@
       "title": "Eff. Loader SDXL"
     }
   },
-  "85": {
-    "inputs": {
-      "input_mode": "simple",
-      "lora_count": 1,
-      "lora_name_1": "None",
-      "lora_wt_1": 1,
-      "model_str_1": 1,
-      "clip_str_1": 1,
-      "lora_name_2": "None",
-      "lora_wt_2": 1,
-      "model_str_2": 1,
-      "clip_str_2": 1,
-      "lora_name_3": "None",
-      "lora_wt_3": 1,
-      "model_str_3": 1,
-      "clip_str_3": 1,
-      "lora_name_4": "None",
-      "lora_wt_4": 1,
-      "model_str_4": 1,
-      "clip_str_4": 1,
-      "lora_name_5": "None",
-      "lora_wt_5": 1,
-      "model_str_5": 1,
-      "clip_str_5": 1,
-      "lora_name_6": "None",
-      "lora_wt_6": 1,
-      "model_str_6": 1,
-      "clip_str_6": 1,
-      "lora_name_7": "None",
-      "lora_wt_7": 1,
-      "model_str_7": 1,
-      "clip_str_7": 1,
-      "lora_name_8": "None",
-      "lora_wt_8": 1,
-      "model_str_8": 1,
-      "clip_str_8": 1,
-      "lora_name_9": "None",
-      "lora_wt_9": 1,
-      "model_str_9": 1,
-      "clip_str_9": 1,
-      "lora_name_10": "None",
-      "lora_wt_10": 1,
-      "model_str_10": 1,
-      "clip_str_10": 1,
-      "lora_name_11": "None",
-      "lora_wt_11": 1,
-      "model_str_11": 1,
-      "clip_str_11": 1,
-      "lora_name_12": "None",
-      "lora_wt_12": 1,
-      "model_str_12": 1,
-      "clip_str_12": 1,
-      "lora_name_13": "None",
-      "lora_wt_13": 1,
-      "model_str_13": 1,
-      "clip_str_13": 1,
-      "lora_name_14": "None",
-      "lora_wt_14": 1,
-      "model_str_14": 1,
-      "clip_str_14": 1,
-      "lora_name_15": "None",
-      "lora_wt_15": 1,
-      "model_str_15": 1,
-      "clip_str_15": 1,
-      "lora_name_16": "None",
-      "lora_wt_16": 1,
-      "model_str_16": 1,
-      "clip_str_16": 1,
-      "lora_name_17": "None",
-      "lora_wt_17": 1,
-      "model_str_17": 1,
-      "clip_str_17": 1,
-      "lora_name_18": "None",
-      "lora_wt_18": 1,
-      "model_str_18": 1,
-      "clip_str_18": 1,
-      "lora_name_19": "None",
-      "lora_wt_19": 1,
-      "model_str_19": 1,
-      "clip_str_19": 1,
-      "lora_name_20": "None",
-      "lora_wt_20": 1,
-      "model_str_20": 1,
-      "clip_str_20": 1,
-      "lora_name_21": "None",
-      "lora_wt_21": 1,
-      "model_str_21": 1,
-      "clip_str_21": 1,
-      "lora_name_22": "None",
-      "lora_wt_22": 1,
-      "model_str_22": 1,
-      "clip_str_22": 1,
-      "lora_name_23": "None",
-      "lora_wt_23": 1,
-      "model_str_23": 1,
-      "clip_str_23": 1,
-      "lora_name_24": "None",
-      "lora_wt_24": 1,
-      "model_str_24": 1,
-      "clip_str_24": 1,
-      "lora_name_25": "None",
-      "lora_wt_25": 1,
-      "model_str_25": 1,
-      "clip_str_25": 1,
-      "lora_name_26": "None",
-      "lora_wt_26": 1,
-      "model_str_26": 1,
-      "clip_str_26": 1,
-      "lora_name_27": "None",
-      "lora_wt_27": 1,
-      "model_str_27": 1,
-      "clip_str_27": 1,
-      "lora_name_28": "None",
-      "lora_wt_28": 1,
-      "model_str_28": 1,
-      "clip_str_28": 1,
-      "lora_name_29": "None",
-      "lora_wt_29": 1,
-      "model_str_29": 1,
-      "clip_str_29": 1,
-      "lora_name_30": "None",
-      "lora_wt_30": 1,
-      "model_str_30": 1,
-      "clip_str_30": 1,
-      "lora_name_31": "None",
-      "lora_wt_31": 1,
-      "model_str_31": 1,
-      "clip_str_31": 1,
-      "lora_name_32": "None",
-      "lora_wt_32": 1,
-      "model_str_32": 1,
-      "clip_str_32": 1,
-      "lora_name_33": "None",
-      "lora_wt_33": 1,
-      "model_str_33": 1,
-      "clip_str_33": 1,
-      "lora_name_34": "None",
-      "lora_wt_34": 1,
-      "model_str_34": 1,
-      "clip_str_34": 1,
-      "lora_name_35": "None",
-      "lora_wt_35": 1,
-      "model_str_35": 1,
-      "clip_str_35": 1,
-      "lora_name_36": "None",
-      "lora_wt_36": 1,
-      "model_str_36": 1,
-      "clip_str_36": 1,
-      "lora_name_37": "None",
-      "lora_wt_37": 1,
-      "model_str_37": 1,
-      "clip_str_37": 1,
-      "lora_name_38": "None",
-      "lora_wt_38": 1,
-      "model_str_38": 1,
-      "clip_str_38": 1,
-      "lora_name_39": "None",
-      "lora_wt_39": 1,
-      "model_str_39": 1,
-      "clip_str_39": 1,
-      "lora_name_40": "None",
-      "lora_wt_40": 1,
-      "model_str_40": 1,
-      "clip_str_40": 1,
-      "lora_name_41": "None",
-      "lora_wt_41": 1,
-      "model_str_41": 1,
-      "clip_str_41": 1,
-      "lora_name_42": "None",
-      "lora_wt_42": 1,
-      "model_str_42": 1,
-      "clip_str_42": 1,
-      "lora_name_43": "None",
-      "lora_wt_43": 1,
-      "model_str_43": 1,
-      "clip_str_43": 1,
-      "lora_name_44": "None",
-      "lora_wt_44": 1,
-      "model_str_44": 1,
-      "clip_str_44": 1,
-      "lora_name_45": "None",
-      "lora_wt_45": 1,
-      "model_str_45": 1,
-      "clip_str_45": 1,
-      "lora_name_46": "None",
-      "lora_wt_46": 1,
-      "model_str_46": 1,
-      "clip_str_46": 1,
-      "lora_name_47": "None",
-      "lora_wt_47": 1,
-      "model_str_47": 1,
-      "clip_str_47": 1,
-      "lora_name_48": "None",
-      "lora_wt_48": 1,
-      "model_str_48": 1,
-      "clip_str_48": 1,
-      "lora_name_49": "None",
-      "lora_wt_49": 1,
-      "model_str_49": 1,
-      "clip_str_49": 1
-    },
-    "class_type": "LoRA Stacker",
-    "_meta": {
-      "title": "LoRA Stacker"
-    }
-  },
   "89": {
     "inputs": {
-      "prompt": ""
+      "prompt": "(orange eyes, shiny skin, reflections on the skin, skin reflections:1.2)"
     },
     "class_type": "CR Prompt Text",
     "_meta": {
@@ -304,7 +94,7 @@
   },
   "154": {
     "inputs": {
-      "prompt": "(orange fedora:1), standing in India"
+      "prompt": "(orange fedora:1.75), (professional photo, balanced photo, 50mm:1.2), standing in park"
     },
     "class_type": "CR Prompt Text",
     "_meta": {
@@ -315,7 +105,7 @@
     "inputs": {
       "filename": "%time_%seed",
       "path": "generated_images/%date",
-      "extension": "webp",
+      "extension": "png",
       "steps": [
         "161",
         0
@@ -358,8 +148,8 @@
       "counter": 0,
       "time_format": "%Y-%m-%d-%H%M%S",
       "images": [
-        "245",
-        0
+        "80",
+        3
       ]
     },
     "class_type": "Save Image w/Metadata",
@@ -376,21 +166,12 @@
       "title": "seed"
     }
   },
-  "159": {
-    "inputs": {
-      "ckpt_name": "crystal_clear_xl.safetensors"
-    },
-    "class_type": "Checkpoint Selector",
-    "_meta": {
-      "title": "Checkpoint Selector"
-    }
-  },
   "161": {
     "inputs": {
-      "steps_total": 30,
-      "refiner_step": 30,
-      "cfg": 7,
-      "sampler_name": "dpm_2_ancestral",
+      "steps_total": 40,
+      "refiner_step": 40,
+      "cfg": 9,
+      "sampler_name": "dpmpp_3m_sde_gpu",
       "scheduler": "karras"
     },
     "class_type": "KSampler Config (rgthree)",
@@ -480,201 +261,6 @@
       "title": "🔳 CR SDXL Aspect Ratio"
     }
   },
-  "244": {
-    "inputs": {
-      "guide_size": 128,
-      "guide_size_for": true,
-      "max_size": 768,
-      "seed": [
-        "157",
-        0
-      ],
-      "steps": [
-        "161",
-        0
-      ],
-      "cfg": [
-        "161",
-        2
-      ],
-      "sampler_name": [
-        "161",
-        3
-      ],
-      "scheduler": [
-        "161",
-        4
-      ],
-      "denoise": 0.6,
-      "feather": 5,
-      "noise_mask": true,
-      "force_inpaint": true,
-      "bbox_threshold": 0.5,
-      "bbox_dilation": 20,
-      "bbox_crop_factor": 3,
-      "sam_detection_hint": "center-1",
-      "sam_dilation": 20,
-      "sam_threshold": 0.93,
-      "sam_bbox_expansion": 0,
-      "sam_mask_hint_threshold": 0.7,
-      "sam_mask_hint_use_negative": "False",
-      "drop_size": 10,
-      "wildcard": "",
-      "cycle": 1,
-      "inpaint_model": false,
-      "noise_mask_feather": 0,
-      "image": [
-        "276",
-        0
-      ],
-      "model": [
-        "171",
-        0
-      ],
-      "clip": [
-        "173",
-        1
-      ],
-      "vae": [
-        "80",
-        2
-      ],
-      "positive": [
-        "173",
-        2
-      ],
-      "negative": [
-        "173",
-        3
-      ],
-      "bbox_detector": [
-        "284",
-        0
-      ]
-    },
-    "class_type": "FaceDetailer",
-    "_meta": {
-      "title": "FaceDetailer"
-    }
-  },
-  "245": {
-    "inputs": {
-      "guide_size": 360,
-      "guide_size_for": true,
-      "max_size": 768,
-      "seed": [
-        "157",
-        0
-      ],
-      "steps": [
-        "161",
-        0
-      ],
-      "cfg": [
-        "161",
-        2
-      ],
-      "sampler_name": [
-        "161",
-        3
-      ],
-      "scheduler": [
-        "161",
-        4
-      ],
-      "denoise": 0.5,
-      "feather": 5,
-      "noise_mask": true,
-      "force_inpaint": false,
-      "bbox_threshold": 0.5,
-      "bbox_dilation": 10,
-      "bbox_crop_factor": 3,
-      "sam_detection_hint": "center-1",
-      "sam_dilation": 10,
-      "sam_threshold": 0.93,
-      "sam_bbox_expansion": 0,
-      "sam_mask_hint_threshold": 0.7,
-      "sam_mask_hint_use_negative": "False",
-      "drop_size": 10,
-      "refiner_ratio": 0.2,
-      "cycle": 1,
-      "inpaint_model": false,
-      "noise_mask_feather": 0,
-      "image": [
-        "244",
-        0
-      ],
-      "detailer_pipe": [
-        "244",
-        4
-      ]
-    },
-    "class_type": "FaceDetailerPipe",
-    "_meta": {
-      "title": "FaceDetailer (pipe)"
-    }
-  },
-  "266": {
-    "inputs": {
-      "seed": [
-        "157",
-        0
-      ],
-      "steps": [
-        "161",
-        0
-      ],
-      "cfg": [
-        "161",
-        2
-      ],
-      "sampler_name": [
-        "161",
-        3
-      ],
-      "scheduler": [
-        "161",
-        4
-      ],
-      "denoise": 0.8,
-      "model": [
-        "171",
-        0
-      ],
-      "positive": [
-        "173",
-        2
-      ],
-      "negative": [
-        "173",
-        3
-      ],
-      "latent_image": [
-        "80",
-        1
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "276": {
-    "inputs": {
-      "samples": [
-        "266",
-        0
-      ],
-      "vae": [
-        "80",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
   "279": {
     "inputs": {
       "shot": "Head and shoulders portrait",
@@ -688,34 +274,34 @@
       "body_type": "-",
       "body_type_weight": 0,
       "model_pose": "-",
-      "eyes_color": "Brown",
-      "facial_expression": "Peaceful",
-      "facial_expression_weight": 0.93,
+      "eyes_color": "Blue",
+      "facial_expression": "Calm",
+      "facial_expression_weight": 0.75,
       "face_shape": "-",
       "face_shape_weight": 0,
-      "facial_asymmetry": 1.03,
+      "facial_asymmetry": 1,
       "hair_style": "-",
       "hair_color": "-",
       "disheveled": 0.5,
       "beard": "-",
-      "natural_skin": 1.51,
-      "skin_details": 0.97,
-      "skin_pores": 0.93,
-      "dimples": 0.33,
-      "wrinkles": 0.29,
-      "freckles": 0.32,
-      "moles": 0.3,
-      "skin_imperfections": 0.33,
-      "skin_acne": 0.26,
-      "tanned_skin": 0.26,
-      "eyes_details": 1.05,
-      "iris_details": 1.02,
-      "circular_iris": 1.02,
-      "circular_pupil": 1.01,
+      "natural_skin": 1,
+      "skin_details": 1,
+      "skin_pores": 1,
+      "dimples": 0.5,
+      "wrinkles": 0.5,
+      "freckles": 0.5,
+      "moles": 0.5,
+      "skin_imperfections": 0.5,
+      "skin_acne": 0.5,
+      "tanned_skin": 0.5,
+      "eyes_details": 0,
+      "iris_details": 0,
+      "circular_iris": 0,
+      "circular_pupil": 0,
       "light_type": "Natural sunlight",
       "light_direction": "from top-left",
       "light_weight": 1,
-      "photorealism_improvement": "enable",
+      "photorealism_improvement": "disable",
       "prompt_start": [
         "154",
         0
@@ -736,13 +322,30 @@
       "title": "Portrait Master v.2.3"
     }
   },
-  "284": {
+  "285": {
     "inputs": {
-      "model_name": "bbox/face_yolov8m.pt"
+      "output": "",
+      "source": [
+        "279",
+        0
+      ]
     },
-    "class_type": "UltralyticsDetectorProvider",
+    "class_type": "Display Any (rgthree)",
     "_meta": {
-      "title": "UltralyticsDetectorProvider"
+      "title": "Display Any (rgthree)"
+    }
+  },
+  "286": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "279",
+        1
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any (rgthree)"
     }
   }
 }
