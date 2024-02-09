@@ -48,7 +48,7 @@
   },
   "84": {
     "inputs": {
-      "base_ckpt_name": "colossus_xl_vae.safetensors",
+      "base_ckpt_name": "crystal_clear_xl.safetensors",
       "base_clip_skip": -3,
       "refiner_ckpt_name": "None",
       "refiner_clip_skip": -3,
@@ -304,7 +304,7 @@
   },
   "154": {
     "inputs": {
-      "prompt": "orange fedora, orange suit, standing in a park"
+      "prompt": "(orange fedora:1), standing in India"
     },
     "class_type": "CR Prompt Text",
     "_meta": {
@@ -315,7 +315,7 @@
     "inputs": {
       "filename": "%time_%seed",
       "path": "generated_images/%date",
-      "extension": "jpeg",
+      "extension": "webp",
       "steps": [
         "161",
         0
@@ -324,7 +324,7 @@
         "161",
         2
       ],
-      "modelname": "colossus_xl_vae.safetensors",
+      "modelname": "dynavision_vae.safetensors",
       "sampler_name": [
         "161",
         3
@@ -376,11 +376,20 @@
       "title": "seed"
     }
   },
+  "159": {
+    "inputs": {
+      "ckpt_name": "crystal_clear_xl.safetensors"
+    },
+    "class_type": "Checkpoint Selector",
+    "_meta": {
+      "title": "Checkpoint Selector"
+    }
+  },
   "161": {
     "inputs": {
-      "steps_total": 50,
-      "refiner_step": 50,
-      "cfg": 8,
+      "steps_total": 30,
+      "refiner_step": 30,
+      "cfg": 7,
       "sampler_name": "dpm_2_ancestral",
       "scheduler": "karras"
     },
@@ -541,10 +550,6 @@
       "bbox_detector": [
         "284",
         0
-      ],
-      "sam_model_opt": [
-        "285",
-        0
       ]
     },
     "class_type": "FaceDetailer",
@@ -677,13 +682,13 @@
       "gender": "Woman",
       "androgynous": 0,
       "age": 30,
-      "nationality_1": "Angolan",
+      "nationality_1": "Croatian",
       "nationality_2": "-",
       "nationality_mix": 0.5,
       "body_type": "-",
       "body_type_weight": 0,
       "model_pose": "-",
-      "eyes_color": "-",
+      "eyes_color": "Brown",
       "facial_expression": "Peaceful",
       "facial_expression_weight": 0.93,
       "face_shape": "-",
@@ -703,10 +708,10 @@
       "skin_imperfections": 0.33,
       "skin_acne": 0.26,
       "tanned_skin": 0.26,
-      "eyes_details": 1,
-      "iris_details": 1,
-      "circular_iris": 1,
-      "circular_pupil": 1,
+      "eyes_details": 1.05,
+      "iris_details": 1.02,
+      "circular_iris": 1.02,
+      "circular_pupil": 1.01,
       "light_type": "Natural sunlight",
       "light_direction": "from top-left",
       "light_weight": 1,
@@ -721,7 +726,7 @@
         "89",
         0
       ],
-      "style_1": "HDR Photography",
+      "style_1": "-",
       "style_1_weight": 1.5,
       "style_2": "-",
       "style_2_weight": 1.5
@@ -738,16 +743,6 @@
     "class_type": "UltralyticsDetectorProvider",
     "_meta": {
       "title": "UltralyticsDetectorProvider"
-    }
-  },
-  "285": {
-    "inputs": {
-      "model_name": "sam_vit_b_01ec64.pth",
-      "device_mode": "AUTO"
-    },
-    "class_type": "SAMLoader",
-    "_meta": {
-      "title": "SAMLoader (Impact)"
     }
   }
 }
